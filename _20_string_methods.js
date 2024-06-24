@@ -1,72 +1,70 @@
 let stringOne = "freeCodeCamp is best place to learn";
 let stringTwo = "frontend and backend development";
 
-//charAt()
-console.log(stringOne.charAt(1));//r
-// charCodeAt()
-console.log(stringOne.charCodeAt(1));//114
+// charAt() - returns the character at a specified index (position) in a string
+console.log(stringOne.charAt(1)); // "r"
 
-//concat()
-console.log(stringOne.concat(stringTwo));
+// charCodeAt() - returns the Unicode of the character at a specified index in a string
+console.log(stringOne.charCodeAt(1)); // 114 (Unicode for 'r')
 
-//endsWith() -> checks String or char at end index
-console.log(stringOne.endsWith("learn"));//true
-console.log(stringOne.endsWith("to"));//false
+// concat() - joins two or more strings, and returns a new joined strings
+console.log(stringOne.concat(stringTwo)); // "freeCodeCamp is best place to learnfrontend and backend development"
 
-// fromCharCode() -> it is directly from string class
-console.log(String.fromCharCode(114));//"r"
+// endsWith() - checks if a string ends with specified string/characters
+console.log(stringOne.endsWith("learn")); // true
+console.log(stringOne.endsWith("to")); // false
 
-//includes() -> checks the exact match of the string in given string
-console.log(stringTwo.includes("frontend"));//true
-console.log(stringTwo.includes(" backend"));//true
-console.log(stringTwo.includes("to"));//false
+// fromCharCode() - converts Unicode values to characters
+console.log(String.fromCharCode(114)); // "r"
 
-//indexOf() -> will return first available index
-console.log(stringOne.indexOf("end"));//-1 as this string doesnt contain end string
-console.log(stringTwo.indexOf("end"));//5 
+// includes() - checks if a string contains the specified string/characters
+console.log(stringTwo.includes("frontend")); // true
+console.log(stringTwo.includes(" backend")); // true
+console.log(stringTwo.includes("to")); // false
 
-//lastIndexOf() -> will provide last available index else -1
-console.log(stringTwo.lastIndexOf("end"));//17
+// indexOf() - returns the position of the first occurrence of a specified value in a string
+console.log(stringOne.indexOf("end")); // -1 (not found)
+console.log(stringTwo.indexOf("end")); // 5 
 
-//match()
-console.log(stringTwo.match(/end/g));//[ 'end', 'end' ] will provide number of accourences in an array
+// lastIndexOf() - returns the position of the last occurrence of a specified value in a string
+console.log(stringTwo.lastIndexOf("end")); // 17
 
+// match() - searches a string for a match against a regular expression, and returns the matches, as an Array object
+console.log(stringTwo.match(/end/g)); // [ 'end', 'end' ] (all occurrences of "end")
 
-//repeat()
-console.log(stringOne.repeat(3));// concats 2 times or repeats three times
+// repeat() - returns a new string with a specified number of copies of an existing string
+console.log(stringOne.repeat(3)); // "freeCodeCamp is best place to learnfreeCodeCamp is best place to learnfreeCodeCamp is best place to learn"
 
-//replace()
-console.log(stringTwo.replace(/end/g,"END")); // frontEND and backEND development
+// replace() - searches a string for a specified value, or a regular expression, and returns a new string where the specified values are replaced
+console.log(stringTwo.replace(/end/g, "END")); // "frontEND and backEND development"
 
-//search()
-console.log(stringTwo.search(/end/g));
-console.log(stringTwo.search("end"));// will give index of first accourence
+// search() - searches a string for a specified value, or regular expression, and returns the position of the match
+console.log(stringTwo.search(/end/g)); // 5 (position of the first occurrence of "end")
+console.log(stringTwo.search("end")); // 5
 
-//slice()
-console.log(stringTwo.slice(2,4));//on
+// slice() - extracts a part of a string and returns a new string, without modifying the original string
+console.log(stringTwo.slice(2, 4)); // "on" (characters from index 2 to 4, not including 4)
 
-//split();
+// split() - splits a string into an array of substrings
+console.log(stringTwo.split(" ")); // [ 'frontend', 'and', 'backend', 'development' ]
 
-console.log(stringTwo.split(" "));//[ 'frontend', 'and', 'backend', 'development' ]
+// startsWith() - checks if a string starts with specified string/characters
+console.log(stringOne.startsWith("free")); // true
 
-//startsWith()
-console.log(stringOne.startsWith("free"));// true
+// substr() - extracts a part of a string, starting at a specified position, and returns a specified number of characters
+console.log(stringTwo.substr(2, 4)); // "onte" (starts at index 2 and gets 4 characters)
 
-//substr()
-console.log(stringTwo.substr(2,4));//starts with two and will get 4 characters from 2nd index
+// substring() - extracts characters from a string, between two specified indices
+console.log(stringTwo.substring(2, 4)); // "on" (characters from index 2 to 4, not including 4)
 
-//subString()
-console.log(stringTwo.substring(2,4));
+// toLowerCase() - converts a string to lowercase letters
+console.log(stringOne.toLowerCase()); // "freecodecamp is best place to learn"
 
-//toLowerCase()
-console.log(stringOne.toLowerCase());
+// toUpperCase() - converts a string to uppercase letters
+console.log(stringTwo.toUpperCase()); // "FRONTEND AND BACKEND DEVELOPMENT"
 
-//toUpperCase()
-console.log(stringTwo.toUpperCase());
+// toLocaleUpperCase() - converts a string to uppercase letters, according to the host's current locale
+console.log(stringOne.toLocaleUpperCase()); // "FREECODECAMP IS BEST PLACE TO LEARN"
 
-//toLacaleUpperCase()
-console.log(stringOne.toLocaleUpperCase());
-
-//trim() -> will remove white spaces from the string
-console.log("    SubscribeNow!     ".trim());
-
+// trim() - removes whitespace from both sides of a string
+console.log("    SubscribeNow!     ".trim()); // "SubscribeNow!"
